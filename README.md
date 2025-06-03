@@ -1,4 +1,4 @@
-# PacMan Linux
+# PacMan Linux (coming soon)
 **PacMan Linux** is a lightning-fast, Security-Focused Linux Distribution Based on **Arch Linux**, Designed for Hackers, Developers, and Power-Users! With a Minimalistic KDE Desktop, And a Custom Suite of Cyber-Security Tools!
 
 > ⚠️ **Note**: PacMan Linux is currently runs as a **LIVE-ONLY-SYSTEM**. Installation to Disk is **NOT** Supported **YET**, But **PERSISTENT Storage** Can be Configured on USB to Save Changes Between Reboots. 

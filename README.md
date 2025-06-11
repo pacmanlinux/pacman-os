@@ -7,7 +7,7 @@
 
 ## KEY FEATURES
 
-- **Lightweight KDE Desktop** For Performance & Customization.
+- **Lightweight Budgie Desktop** For Performance & Stability.
 - **PacManSec Toolkit** - A Full Suite of Security Tools.
 - **Custom Scripts** For System Configuration, and Hacking.
 - **Arch-Based** Harvesting the Power of Arch-Linux.

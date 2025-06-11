@@ -1,5 +1,5 @@
 # PacMan Linux (coming soon)
-**PacMan Linux** is a lightning-fast, Security-Focused Linux Distribution Based on **Arch Linux**, Designed for Hackers, Developers, and Power-Users! With a Minimalistic Budgie Desktop, Optional to install a Suite of Cyber-Security Tools! Very light on system resources as seen below! (taken straight after initial boot)
+**PacMan Linux** is a lightning-fast, Dev/Security Focused Linux Distribution Based on **Arch Linux**, Designed for Hackers, Developers, and Power-Users! With a Minimalistic Budgie Desktop, Optional to install a Suite of Cyber-Security Tools! Very light on system resources as seen below! (taken straight after initial boot)
 
 ![stats](https://github.com/user-attachments/assets/0fd7d62d-02c3-4acf-ae6f-a502943554fe)
 

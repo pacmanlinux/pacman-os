@@ -43,7 +43,7 @@ To **Save Files** and **System Changes** Between **Reboots**, You Can Enable **P
 
 ## Screenshots
 
-> ![desktop1](https://github.com/user-attachments/assets/18307e92-f304-40f7-98f4-2e9989152cd7)
+![budgie-desktop](https://github.com/user-attachments/assets/3c4f9b46-f78b-4124-b3d6-0a54faddc581)
 
 
 ---

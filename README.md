@@ -19,13 +19,6 @@
 
 ## How To Use
 
-### LIVE-ONLY System
-**PacMan Linux** is Currently**LIVE-ONLY**, Meaning it Runs Entirely From A **USB or DVD**. **NO INSTALLATION TO DISK REQUIRED OR SUPPORTED YET**.
-
-### Add Persistence (Optional)
-
-To **Save Files** and **System Changes** Between **Reboots**, You Can Enable **Persistence**:
-
 1. Use A Tool like **Rufus** (Windows), **Ventoy** (Linux) or **balenaEtcher** (MAC).
 2. Create A Persistent Partition labeled **'persistence'**.
 3. Boot The **ISO** and PacMan Linux Will Detect and Use it Automatically.

@@ -1,6 +1,9 @@
 # PacMan Linux
 **Arch-based Developer & Cybersecurity Workstation, Made Your way...**
 
+![PacMan-Desktop](https://github.com/user-attachments/assets/636ed6bc-1f8c-484c-b3ff-62fe19513190)
+
+
 PacMan Linux is a versatile, lightweight  Arch-based distribution designed primarily as a **Dev-Workstation** using the 'Budgie Desktop' with a strong foundation of dev-tools and software. - Plus a curated set of essential cybersecurity tools. 
 
 Its perfect for programmers, sysadmins, security researchers and power users who want a flexible, secure and performance-optimized OS without unnecessary bloat.
@@ -29,10 +32,6 @@ it provides **building blocks** and lets **you** decide which cybersecurity tool
   
 ---
 
-![PacMan-Desktop](https://github.com/user-attachments/assets/636ed6bc-1f8c-484c-b3ff-62fe19513190)
-
----
-
 # Why PacMan Linux?
 
 - **Not a bloated pentest distro"**
@@ -44,14 +43,7 @@ it provides **building blocks** and lets **you** decide which cybersecurity tool
 - **Secure by default:**
   Hardended kernel and built-in security services mean you get better protection without extra effort.
 
-## Screenshots
-
-![budgie-desktop](https://github.com/user-attachments/assets/3c4f9b46-f78b-4124-b3d6-0a54faddc581)
-
-
 ---
-
-
 
 ## Contribute Towards PacMan Linux
 

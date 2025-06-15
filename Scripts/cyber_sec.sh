@@ -24,27 +24,27 @@ install_tool() {
 	TOOL=$1
 	case $TOOL in 
 		#--Pacman Tools-------------------------------------------->
-		nmap|whois|dnsenum|wireshark|tcpdump|hydra|john|binwalk|gdb|radare2|aircrack-ng|nikto|ettercap|logstash|suricata|sleuthkit|hashcat|reaver|ettercap|openvas|iperf3|netcat|htop|strace|lsof|firejail|apparmor|fail2ban|ufw|btop|glances|inxi)
+		trivy|metasploit|sqlmap|python-shodan|nmap|whois|wireshark|tcpdump|hydra|john|binwalk|gdb|radare2|aircrack-ng|nikto|ettercap|logstash|suricata|sleuthkit|hashcat|reaver|ettercap|openvas|iperf3|netcat|htop|strace|lsof|firejail|apparmor|fail2ban|btop|glances|inxi)
 			sudo pacman -S --noconfirm "$TOOL"
 			;;
 
 		#--yay / AUR Tools-------------------------------------------->
-		theHarvester|recon-ng|wpscan|burpsuite|msfconsole|ghidra|empire|ossec|mobSF|gobuster|bettercap|mitmproxy|drozer|veil|sn0int|kismet|wireshark-qt|cutter|dirsearch|faraday|beef|exploitdb|apktool|wifite|armitage)
-			yay -S --noconfirm "$TOOL"
+		python-nmap|kube-hunter-bin|android-apktool|detect-it-easy-bin/ida-free|volatility3|autopsy|spiderfoot|maltego|crunch|cewl-git|wafw00f|ffuf|naabu|httpx|subfinder|amass|recon-ng|wpscan|burpsuite|ghidra|powershell-empire|ossec-hids-local|mobSF|gobuster|bettercap|mitmproxy|veil|sn0int|kismet|wireshark-qt|cutter|dirsearch|faraday|beef|exploitdb|apktool|wifite|armitage|dnsenum2)
+		yay -S --noconfirm "$TOOL"
 			;;
 
 		#--pip Tools-------------------------------------------->
-		shodan|sqlmap|SpiderFoot|GHunt|volatility|cewl|autochrome|cloudscrapper|pywhat|detect-it-easy|impacket|mitm6|fierce|python-nmap)
+		shodan|GHunt|autochrome|cloudscrapper|pywhat|impacket)
 			pip install "$TOOL"
 			;;
 
 		#--Go Tools-------------------------------------------->
-		ffuf|amass|subfinder|httpx|nuclei|naabu)
-			go install "$TOOL"
+		nuclei)
+			go install "$TOOL"@latest
 			;;
 
 		#--Manual or Download-------------------------------------------->
-		maltego|autopsy|ScoutSuite|Pacu|IDA-Free|searchsploit|linPEAS|winPEAS|kube-hunter)
+		fierce|ScoutSuite|Pacu|searchsploit|linPEAS|winPEAS|drozer|mitm6)
 			echo "[!] Please Download and install $TOOL Manually"
 			;;
 		*)	
@@ -56,23 +56,23 @@ install_tool() {
 uninstall_tool() {
 	TOOL=$1
 	case "$TOOL" in 
-		nmap|whois|dnsenum|wireshark|tcpdump|hydra|john|binwalk|gdb|radare2|aircrack-ng|nikto|ettercap|logstash|suricata|sleuthkit|hashcat|reaver|ettercap|openvas|iperf3|netcat|htop|strace|lsof|firejail|apparmor|fail2ban|ufw|btop|glances|inxi)
+		trivy|metasploit|sqlmap|python-shodan|nmap|whois|wireshark|tcpdump|hydra|john|binwalk|gdb|radare2|aircrack-ng|nikto|ettercap|logstash|suricata|sleuthkit|hashcat|reaver|ettercap|openvas|iperf3|netcat|htop|strace|lsof|firejail|apparmor|fail2ban|btop|glances|inxi)
 			sudo pacman -Rns --noconfirm "$TOOL"
 			;;
 
-		theHarvester|recon-ng|wpscan|burpsuite|msfconsole|ghidra|empire|ossec|mobSF|gobuster|bettercap|mitmproxy|drozer|veil|sn0int|kismet|wireshark-qt|cutter|dirsearch|faraday|beef|exploitdb|apktool|wifite|armitage|wafw00f)
+		python-nmap|kube-hunter-bin|android-apktool|detect-it-easy-bin|ida-free|volatility3|autopsy|spiderfoot|maltego|crunch|cewl-git|ffuf|naabu|httpx|subfinder|amass|recon-ng|wpscan|burpsuite|ghidra|powershell-empire|ossec-hids-local|mobSF|gobuster|bettercap|mitmproxy|veil|sn0int|kismet|wireshark-qt|cutter|dirsearch|faraday|beef|exploitdb|apktool|wifite|armitage|wafw00f|dnsenum2)
 			yay -Rns --noconfirm "$TOOL"
 			;;
 
-		shodan|sqlmap|SpiderFoot|GHunt|volatility|cewl|autochrome|cloudscrapper|pywhat|detect-it-easy|impacket|mitm6|fierce|python-nmap)
+		shodan|GHunt|cewl|autochrome|cloudscrapper|pywhat|impacket)
 			pip uninstall -y "$TOOL"
 			;;
 
-		ffuf|amass|subfinder|httpx|nuclei|naabu)
+		nuclei)
 			rm -f "$(go env GOPATH)/bin/$TOOL"
 			;;
 
-		maltego|autopsy|ScoutSuite|Pacu|IDA-Free|searchsploit|linPEAS|winPEAS|kube-hunter)
+		fierce|ScoutSuite|Pacu|searchsploit|linPEAS|winPEAS|drozer|mitm6)
 			echo "[!] Please Uninstall $TOOL Manually"
 			;;
 		*)	
@@ -105,7 +105,7 @@ main_menu() {
 		"Web Hacking" \
 		"Exploitation" \
 		"Post-Exploitation" \
-		"PassWord Cracking" \
+		"Password Cracking" \
 		"Wireless Attacks" \
 		"OSINT" \
 		"Cloud Security" \
@@ -120,19 +120,19 @@ main_menu() {
 
 		case $CATEGORY in 
 		"Recon")
-			submenu "Recon" nmap whois dnsenum theHarvester recon-ng shodan amass subfinder httpx naabu ffuf
+			submenu "Recon" nmap whois dnsenum2 recon-ng shodan amass subfinder httpx naabu ffuf
 			;;
 		"Web Hacking")
 			submenu "Web" wpscan burpsuite sqlmap nikto ffuf gobuster dirsearch wafw00f 
 			;;
 		"Exploitation")
-			submenu "Exploitation" msfconsole searchsploit drozer veil armitage exploitdb
+			submenu "Exploitation" metasploit searchsploit drozer veil armitage exploitdb
 			;;
 		"Post-Exploitation")
-			submenu "Post" empire linPEAS winPEAS sn0int beef
+			submenu "Post" powershell-empire linPEAS winPEAS sn0int beef
 			;;
 		"Password Cracking")
-			submenu "Passwords" john hashcat hydra cewl crunch
+			submenu "Passwords" john hashcat hydra cewl-git crunch
 			;;
 		"Wireless Attacks")
 			submenu "Wireless" aircrack-ng kismet reaver wifite
@@ -144,25 +144,25 @@ main_menu() {
 			submenu "Cloud" ScoutSuite Pacu cloudscrapper
 			;;
 		"Forensics")
-			submenu "Forensics" autopsy volatility sleuthkit binwalk
+			submenu "Forensics" autopsy volatility3 sleuthkit binwalk
 			;;
 		"Reverse Engineering")
-			submenu "Reverse Engineering" gdb ghidra radare2 cutter IDA-Free
+			submenu "Reverse Engineering" gdb ghidra radare2 cutter ida-free
 			;;
 		"Binary Analysis")
-			submenu "Binary" detect-it-easy apktool apktool
+			submenu "Binary" detect-it-easy-bin android-apktool
 			;;
 		"Container Security")
-			submenu "Containers" trivy dockscan kube-hunter 
+			submenu "Containers" trivy kube-hunter-bin
 			;;
 		"MITM / Network Attacks")
 			submenu "Network Attacks" mitmproxy bettercap ettercap mitm6 wireshark tcpdump netcat
 			;;
 		"Blue Team")
-			submenu "Blue Team" ossec logstash suricata ufw fail2ban apparmor firejail
+			submenu "Blue Team" ossec-hids-local logstash suricata fail2ban apparmor firejail
 			;;
 		"System Utilities")
-			submenu "System" htop glances inix btop strace lsof iperf3 python-nmap autochrome
+			submenu "System" glances inxi strace lsof iperf3 python-nmap python-shodan autochrome
 			;;
 		"Exit" |*)
 			exit 0

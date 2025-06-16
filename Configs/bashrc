@@ -1,0 +1,28 @@
+# ~/.bashrc
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+#== PacMan Linux - Bash Prompt==========================================>
+PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[38;5;46;1m\]\\$\[\e[>
+
+#== Find the Command====================================================>
+source /usr/share/doc/find-the-command/ftc.bash
+
+#==Alias For PacMan Linux===============================================>
+alias ls="lsd -g --color=always --group-directories-first --icon=always"
+alias cat="bat"
+alias upyay="yay"
+alias inapp="yay -S"
+alias remove="yay -Rns"
+alias neofetch="clear && neofetch --off"
+alias bashrc="sudo nano $HOME/.bashrc"
+alias grub="sudo update-grub"
+alias grep="ugrep"
+alias ports="netstat -tulanp | fzf"
+alias ipv4="ip addr show | grep 'inet ' | grep -v '127.0.0.1' | cut -d' ' -f6 | cut -d/ -f1"
+alias ipv6="ip addr show | grep 'inet6 ' | cut -d ' ' -f6 | sed -n '2p'"
+alias autorm='orphans=$(pacman -Qdtq); [ -z "$orphans" ] && echo "There are no orphaned packages" >
+alias yayup="yay -Sy &> /dev/null && yay -Qu"
+alias up='source ~/.bashrc && echo ".bashrc sourced!"'
+alias mirror="sudo reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist"
+alias pacconf="sudo nano /etc/pacman.conf"

@@ -5,7 +5,7 @@ This folder contains essential shell scripts used to **build, configure, install
 
 - **'secure_harden_base.sh'** --> **Core System Hardening**
 - **'cyber_sec_.sh'** --> **Install / Uninstall CyberSecurity Tools**
-- **'dblock.sh'** --> **Remove DataBase Lock File**
+- **'dblock.sh'** --> **Remove Database Lock File**
 
 ---
 

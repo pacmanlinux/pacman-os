@@ -1,4 +1,4 @@
-# PacMan Linux - 'scripts' Directory 
+# SCRIPTS
 This folder contains essential shell scripts used to **build, configure, maintain, install and harden** PacMan Linux.
 
 ---
